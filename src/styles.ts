@@ -17,8 +17,10 @@ export const MainGrow = styled.main`
 `;
 
 export const H2 = styled.h2`
-  min-height: 3.6rem;
-  font-size: 1.8rem;
+  min-height: 2.8rem;
+  max-height: 2.8rem;
+  overflow: hidden;
+  font-size: 1.4rem;
   line-height: 1;
   text-align: center;
 `;
@@ -26,4 +28,14 @@ export const H2 = styled.h2`
 export const CardList = styled.div`
   display: flex;
   flex-wrap: wrap;
+`;
+
+export const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  width: calc(20% - 50px);
+  margin: 5px;
+  padding: 20px;
+  background: #f1f1f1;
 `;
