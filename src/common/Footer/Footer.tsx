@@ -1,3 +1,8 @@
 import React from 'react';
+import {FooterContainer} from './Footer.style';
 
-export const Footer = () => <div>Footer</div>;
+export const Footer = () => (
+    <FooterContainer>
+        © {(new Date()).getFullYear()}. Check Peet
+    </FooterContainer>
+);
