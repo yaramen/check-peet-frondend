@@ -1,16 +1,17 @@
 import React from 'react';
 import {Switch, Route} from "react-router-dom"
-import {Header} from "./common/Header";
-import {Footer} from "./common/Footer";
+import {Header} from "./common/Header/Header";
+import {Footer} from "./common/Footer/Footer";
 import {Home} from "./components/Home";
 import {Category} from "./components/Category";
 import {Product} from "./components/Product";
 import {Cart} from "./components/Cart";
 import {NotFound} from "./components/NotFound";
+import {Container} from "./styles";
 
 function App() {
     return (
-        <div>
+        <Container>
             <Header/>
             <Switch>
                 <Route path="/" component={Home} exact/>
@@ -20,7 +21,7 @@ function App() {
                 <Route path="/" component={NotFound} />
             </Switch>
             <Footer/>
-        </div>
+        </Container>
     );
 }
 
