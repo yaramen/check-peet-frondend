@@ -12,23 +12,33 @@ const Pairs = styled.div`
 `
 
 export interface ProductCardProps {
-    product: Product
+    product: Product,
+    withButtons?: boolean
 }
 
-export const ProductCard = ({product}: ProductCardProps) => {
+export const ProductCard = ({product, withButtons}: ProductCardProps) => {
     const {name, image, code, calories, protein, fat, carbohydrate} = product;
     const tableProperties = [protein, fat, carbohydrate, calories];
+
+    const buttons = withButtons
+        ? <Pairs>
+            <button>Добавить</button>
+            <Link to={`/product/${code}/`}>Подробнее</Link>
+          </Pairs>
+        : null;
+
     return (
         <Section>
             <Link to={`/product/${code}/`} className="link link--block">
                 <H2>{name}</H2>
                 <img src={image} alt={name}/>
                 <TableProperties propertiesValues={tableProperties}/>
-                <Pairs>
-                    <button>Добавить</button>
-                    <Link to={`/product/${code}/`}>Подробнее</Link>
-                </Pairs>
+                {buttons}
             </Link>
         </Section>
     )
 };
+
+ProductCard.defaultProps = {
+    withButtons: false
+}

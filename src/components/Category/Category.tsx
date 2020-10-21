@@ -6,7 +6,7 @@ import {CardList} from '../../styles';
 export const Category = () => (
     <CardList>
         {products.map(product => (
-            <ProductCard product={product} />
+            <ProductCard product={product} withButtons={true}/>
         ))}
     </CardList>
 );

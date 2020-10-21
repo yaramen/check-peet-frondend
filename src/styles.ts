@@ -34,8 +34,13 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 200px;
-  width: calc(20% - 50px);
+  max-width: 230px;
   margin: 5px;
   padding: 20px;
   background: #f1f1f1;
+`;
+
+export const FloatLeft = styled.div`
+  float: left;
+  margin-right: 10px;
 `;
