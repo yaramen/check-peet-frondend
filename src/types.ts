@@ -15,5 +15,6 @@ export type Product = {
     carbohydrate: number,
     calories: number,
     image: string,
-    description?: string
+    description?: string,
+    amount?: number
 };
