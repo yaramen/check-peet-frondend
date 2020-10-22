@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route} from "react-router-dom"
-import {Header} from "./common/Header/Header";
-import {Footer} from "./common/Footer/Footer";
+import {Header} from "./common/Header";
+import {Footer} from "./common/Footer";
 import {Home} from "./components/Home";
 import {Category} from "./components/Category";
 import {Product} from "./components/Product";
@@ -20,7 +20,7 @@ function App() {
                         <Route path="/category/:categoryId" component={Category}/>
                         <Route path="/product/:productId" component={Product}/>
                         <Route path="/cart" component={Cart}/>
-                        <Route path="/" component={NotFound} />
+                        <Route path="/" component={NotFound}/>
                     </Switch>
                 </MainGrow>
                 <Footer/>

@@ -9,14 +9,14 @@ export const getCategories: FetchDataType<Category[]> = () => {
         .catch(error => error);
 };
 
-export const getProducts = (categoryId: string | number) => {
-    return fetch(`/products/${categoryId}`)
+export const getProducts: FetchDataType<Product[]> = (id?: string | number) => {
+    return fetch(`/products/${id}`)
         .then(response => response.json())
         .catch(error => error);
 };
 
-export const getProduct = (productId: string | number) => {
-    return fetch(`/product/${productId}`)
+export const getProduct: FetchDataType<Product> = (id?: string | number) => {
+    return fetch(`/product/${id}`)
         .then(response => response.json())
         .catch(error => error);
 };
