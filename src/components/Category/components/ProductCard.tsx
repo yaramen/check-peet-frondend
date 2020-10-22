@@ -17,19 +17,19 @@ export interface ProductCardProps {
 }
 
 export const ProductCard = ({product, withButtons}: ProductCardProps) => {
-    const {name, image, code, calories, protein, fat, carbohydrate} = product;
+    const {name, image, id, calories, protein, fat, carbohydrate} = product;
     const tableProperties = [protein, fat, carbohydrate, calories];
 
     const buttons = withButtons
         ? <Pairs>
             <button>Добавить</button>
-            <Link to={`/product/${code}/`}>Подробнее</Link>
+            <Link to={`/product/${id}/`}>Подробнее</Link>
           </Pairs>
         : null;
 
     return (
         <Section>
-            <Link to={`/product/${code}/`} className="link link--block">
+            <Link to={`/product/${id}/`} className="link link--block">
                 <H2>{name}</H2>
                 <img src={image} alt={name}/>
                 <TableProperties propertiesValues={tableProperties}/>
